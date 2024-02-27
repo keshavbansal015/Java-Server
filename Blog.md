@@ -185,7 +185,7 @@ response.append("HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n");
 
 ```
 
-![APOD Sample](APOD Sample.png)
+![APOD Sample](APOD.png)
 
 Now, a small discussion for other module used in this code,
 
