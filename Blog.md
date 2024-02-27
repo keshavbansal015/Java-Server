@@ -299,6 +299,8 @@ public class GetThisJoke {
 
 ```
 
+![Sample joke](joke.png)
+
 
 ### Now, lets try running 2 (you can run more) servers on the same port and make them talk to each other
 
