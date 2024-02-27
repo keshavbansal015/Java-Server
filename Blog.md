@@ -377,7 +377,7 @@ When you run them:
 
 References:
 
-1. ![java.net.URL](https://www.baeldung.com/java-url)
-2. ![java.net](https://docs.oracle.com/javase/8/docs/api/java/net/package-summary.html)
-3. ![NASA APIs](https://api.nasa.gov/)
-4. ![Java chat server](https://medium.com/nerd-for-tech/create-a-chat-app-with-java-sockets-8449fdaa933)
+1. [java.net.URL](https://www.baeldung.com/java-url)
+2. [java.net](https://docs.oracle.com/javase/8/docs/api/java/net/package-summary.html)
+3. [NASA APIs](https://api.nasa.gov/)
+4. [Java chat server](https://medium.com/nerd-for-tech/create-a-chat-app-with-java-sockets-8449fdaa933)
