@@ -2,7 +2,7 @@
 
 1. Create a Hello world Java server
 2. Use NASA APOD API
-3. User Joke.api to tell you jokes
+3. User jokeapi.dev to tell you jokes
 4. And get 2 servers to talk to each other. A basic Chat application
 
 <!-- https://apod.nasa.gov/apod/ -->
