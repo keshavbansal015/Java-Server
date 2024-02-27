@@ -22,7 +22,7 @@ public class Server2 {
                         if (receivedMessage == null) {
                             break;
                         }
-                        System.out.println("Server 2 received: " + receivedMessage);
+                        System.out.println("Received: " + receivedMessage);
 
                         // Server 2 sends a response
                         System.out.print("Server 2: ");
@@ -42,7 +42,7 @@ public class Server2 {
 
                 // Server 2 receives a response
                 String response = reader.readLine();
-                System.out.println("Server 2 received: " + response);
+                System.out.println("Received: " + response);
             }
 
         } catch (IOException e) {

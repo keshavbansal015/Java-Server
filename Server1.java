@@ -13,7 +13,7 @@ public class Server1 {
             System.out.println("Server 1 is waiting for connections...");
 
             Socket socket = serverSocket.accept();
-            System.out.println("Server 1 connected to client: " + socket.getInetAddress());
+            System.out.println("Connected to client: " + socket.getInetAddress());
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
@@ -26,7 +26,7 @@ public class Server1 {
                         if (receivedMessage == null) {
                             break;
                         }
-                        System.out.println("Server 1 received: " + receivedMessage);
+                        System.out.println("Received: " + receivedMessage);
 
                         // Server 1 sends a response
                         System.out.print("Server 1: ");
@@ -46,7 +46,7 @@ public class Server1 {
 
                 // Server 1 receives a response
                 String response = reader.readLine();
-                System.out.println("Server 1 received: " + response);
+                System.out.println("Received: " + response);
             }
 
         } catch (IOException e) {

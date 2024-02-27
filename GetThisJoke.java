@@ -48,15 +48,19 @@ public class GetThisJoke {
             } else {
                 outJoke.append(joke[0]);
             }
-            String response = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n" +
-                    "<html><body>" +
-                    "<h2>Hello World!, this is a server with Java backend!</h2>" +
-                    "<form action=\"/submit\" method=\"get\">" +
-                    "<input type=\"submit\" value=\"Get new joke!\">" +
-                    "</form>" +
-                    "<p id=\"apiResponse\">" + outJoke + "</p>" +
-                    "</body></html>";
-            out.println(response);
+            String embed = outJoke
+                    .toString()
+                    .replace("\\n", " ")
+                    .replace("\\\"", "");
+
+                    StringBuilder response = new StringBuilder();
+            response.append("HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n");
+            response.append("<html><body>");
+            response.append("<h2>Hello World!, this is a server with Java backend!</h2>");
+            response.append("<form action=\"/submit\" method=\"get\">");
+            response.append("<input type=\"submit\" value=\"Get new joke!\"></form>");
+            response.append("<p id=\"apiResponse\">" + embed + "</p></body></html>");
+            out.println(response.toString());
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -72,9 +76,7 @@ public class GetThisJoke {
 
     private static String[] makeApiRequest() {
         // Simulate making an API request and return the response
-        // String apiKey = "DEMO_KEY";
         String apiUrl = "https://v2.jokeapi.dev/joke/Any";
-        // + apiKey;
         try (
                 Scanner scanner = new Scanner(new URL(apiUrl).openStream())) {
             StringBuilder response = new StringBuilder();
@@ -92,7 +94,6 @@ public class GetThisJoke {
                 String premise = responseString.split("\"setup\":")[1].split("\"delivery\"")[0];
                 String punchline = responseString.split("\"delivery\":")[1].split("\"flags\"")[0];
                 return new String[] { premise, punchline };
-
             }
         } catch (IOException ioException) {
             ioException.printStackTrace();

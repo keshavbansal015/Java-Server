@@ -40,16 +40,14 @@ public class NasaADOP {
 
             // Fetch image URL from NASA API
             String[] imageUrlAndDescription = getImageUrlFromNasaApi();
-
             String embed = buildHtmlResponse(imageUrlAndDescription);
-
             StringBuilder response = new StringBuilder();
+
             response.append("HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n");
             response.append("<html><body><h2>Hello World!, this is today's APOD!</h2>");
             response.append(embed);
             response.append("</body></html>");
             out.println(response.toString());
-            System.out.println(response.toString());
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -75,7 +73,7 @@ public class NasaADOP {
             }
 
             // Parse the JSON response to get the image / video URL
-            // This is a simplified example, you may want to use a JSON 
+            // This is a simplified example, you may want to use a JSON
             // library for robust parsing
             String responseString = response.toString();
             String title = responseString.split("title\":\"")[1].split("\",")[0];
@@ -99,9 +97,9 @@ public class NasaADOP {
 
     private static String buildHtmlResponse(String[] imageUrlAndDescription) {
         StringBuilder embed = new StringBuilder();
-        embed.append("<p><h3>"+imageUrlAndDescription[0]+"</h3></p>");
-        embed.append("<p><img src=\""+imageUrlAndDescription[1]+"\"></p>");
-        embed.append("<p>"+imageUrlAndDescription[2]+"</p>");
+        embed.append("<p><h3>" + imageUrlAndDescription[0] + "</h3></p>");
+        embed.append("<p><img src=\"" + imageUrlAndDescription[1] + "\"></p>");
+        embed.append("<p>" + imageUrlAndDescription[2] + "</p>");
 
         // System.out.println(embed.toString());
         return embed.toString();
