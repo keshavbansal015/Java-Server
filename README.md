@@ -1,14 +1,13 @@
 ## In this blog, I would:
 
-1. Create a Hello world Java server
-2. Use NASA APOD API
-3. User jokeapi.dev to tell you jokes
-4. And get 2 servers to talk to each other. A basic Chat application
+1. [Create a Hello world Java server](#first-we-create-a-hello-world-java-server)
+2. [Use NASA APOD API](#now-we-extend-the-server-to-display-pictures-from-the-nasa-adop-api)
+3. [User jokeapi.dev to tell you jokes](#integrate-jokeapi-to-get-jokes)
+4. [And get 2 servers to talk to each other. A basic Chat application.](#now-lets-try-running-2-you-can-run-more-servers-on-the-same-port-and-make-them-talk-to-each-other)
 
-<!-- https://apod.nasa.gov/apod/ -->
 
 This blog is to show how people can work with simple APIs and socket using Java, and create a java server
-from scratch and connect it to frontend.
+from scratch.
 
 ### First we create a Hello world Java server.
 
@@ -298,6 +297,8 @@ public class GetThisJoke {
 }
 
 ```
+
+![Sample joke](joke.png)
 
 
 ### Now, lets try running 2 (you can run more) servers on the same port and make them talk to each other
